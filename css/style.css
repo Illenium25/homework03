@@ -1,4 +1,10 @@
 /* INDEX HTML */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
 :root {
   --second-color: #757575;
   --logo-color: #2196f3;
@@ -12,8 +18,20 @@
   background: #fff;
 }
 
+.conteiner {
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .header {
   flex-shrink: 0;
+}
+
+.head-conteiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -36,11 +54,18 @@
   letter-spacing: 0.78px;
 }
 
-.page-list {
+.nav-conteiner {
+  display: flex;
+
+  align-items: center;
+}
+
+.nav-list {
   list-style: none;
+  display: flex;
 }
 
-.studia {
+.nav-item {
   color: var(--text-color);
   font-family: var(--text);
   font-size: 14px;
@@ -48,56 +73,15 @@
   line-height: normal;
   letter-spacing: 0.28px;
   text-decoration: none;
+  display: flex;
 }
 
-.page-list .studia.current {
+.nav-list .nav-item.current {
   color: var(--logo-color);
 }
 
-.studia:hover,
-.studia:focus {
-  color: var(--logo-color);
-  font-family: var(--text);
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: 0.28px;
-}
-
-.portfolio {
-  color: var(--text-color);
-  font-family: var(--text);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: 0.28px;
-  text-decoration: none;
-}
-
-.portfolio:focus,
-.portfolio:hover {
-  color: var(--logo-color);
-  font-family: var(--text);
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: 0.28px;
-}
-
-.contacts {
-  color: var(--text-color);
-  font-family: var(--text);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: 0.28px;
-  text-decoration: none;
-}
-
-.contacts:focus,
-.contacts:hover {
+.nav-item:hover,
+.nav-item:focus {
   color: var(--logo-color);
   font-family: var(--text);
   font-size: 14px;
@@ -109,6 +93,7 @@
 
 .list-header {
   list-style: none;
+  display: flex;
 }
 
 .link-header {
@@ -138,6 +123,8 @@
 .first-box {
   flex-shrink: 0;
   background: #2f303a;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-title {
@@ -365,7 +352,11 @@
   letter-spacing: 0.48px;
 }
 
-.page-list .filter.current {
+.filter-list {
+  list-style: none;
+}
+
+.filter-list .filter.current {
   color: #fff;
   background-color: var(--logo-color);
 }
