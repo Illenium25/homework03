@@ -26,6 +26,7 @@
 
 .header {
   flex-shrink: 0;
+  height: 80px;
 }
 
 .head-conteiner {
@@ -43,6 +44,7 @@
   line-height: normal;
   letter-spacing: 0.78px;
   text-decoration: none;
+  margin-right: 93px;
 }
 
 .studio {
@@ -56,7 +58,6 @@
 
 .nav-conteiner {
   display: flex;
-
   align-items: center;
 }
 
@@ -65,7 +66,7 @@
   display: flex;
 }
 
-.nav-item {
+.nav-link {
   color: var(--text-color);
   font-family: var(--text);
   font-size: 14px;
@@ -76,12 +77,16 @@
   display: flex;
 }
 
-.nav-list .nav-item.current {
+.nav-list .nav-item + .nav-item {
+  margin-left: 50px;
+}
+
+.nav-list .nav-link.current {
   color: var(--logo-color);
 }
 
-.nav-item:hover,
-.nav-item:focus {
+.nav-link:hover,
+.nav-link:focus {
   color: var(--logo-color);
   font-family: var(--text);
   font-size: 14px;
@@ -94,6 +99,10 @@
 .list-header {
   list-style: none;
   display: flex;
+}
+
+.list-header .mail-tel + .mail-tel {
+  margin-left: 40px;
 }
 
 .link-header {
@@ -119,12 +128,16 @@
 }
 
 /* first box index html */
+.hero-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .first-box {
   flex-shrink: 0;
   background: #2f303a;
-  justify-content: center;
-  align-items: center;
+  height: 600px;
 }
 
 .main-title {
@@ -137,12 +150,19 @@
   line-height: 60px;
   letter-spacing: 2.64px;
   text-transform: uppercase;
+  /*  */
+  margin: 0;
+  padding-top: 200px;
+  padding-bottom: 30px;
+  padding-right: 452px;
+  padding-left: 452px;
 }
 
 .main-button {
   border-radius: 4px;
   background: #2196f3;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  height: 50px;
 }
 
 .text-main-button {
@@ -155,18 +175,29 @@
   line-height: 30px;
   letter-spacing: 0.96px;
   cursor: pointer;
+  /*  */
+  margin: 10px 24px 10px 24px;
+  height: 30px;
 }
 
 /* second box index html */
-.third-title {
-  color: var(--text-color);
-  text-align: center;
-  font-family: var(--text);
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 1.08px;
+
+.adv-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin-top: 94px;
+}
+
+.adv-item {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.adv-list .adv-item + .adv-item {
+  margin-left: 30px;
 }
 
 .adv-title {
@@ -177,6 +208,8 @@
   font-weight: 700;
   letter-spacing: 0.42px;
   text-transform: uppercase;
+  width: 270px;
+  height: 16px;
 }
 
 .adv-paragraph {
@@ -187,11 +220,22 @@
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.42px;
+  width: 270px;
+  height: 48px;
 }
 
-/* our team */
+/* work images */
 
-.our-team-tile {
+.work-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin-top: 50px;
+  margin-bottom: 94px;
+}
+
+.third-title {
   color: var(--text-color);
   text-align: center;
   font-family: var(--text);
@@ -200,22 +244,49 @@
   font-weight: 700;
   line-height: normal;
   letter-spacing: 1.08px;
+  /*  */
+  margin-top: 94px;
+  margin-bottom: 0px;
 }
-.our-team {
-  background: #f5f4fa;
+
+/* our team */
+
+.team-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 0px 94px 0px;
+  margin: 0px;
 }
-.igor {
-  background: #fff;
-}
-.olga {
+
+.human-box {
+  display: block;
+  width: 270px;
+  height: 368px;
+  flex-shrink: 0;
+  border-radius: 0px 0px 4px 4px;
   background: #fff;
 }
 
-.mikola {
-  background: #fff;
+.team-list .human + .human {
+  margin-left: 30px;
 }
-.michailo {
-  background: #fff;
+
+.our-team-title {
+  color: var(--text-color);
+  text-align: center;
+  font-family: var(--text);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.08px;
+  /*  */
+  margin-top: 94px;
+  margin-bottom: 50px;
+}
+.our-team {
+  background: #f5f4fa;
 }
 
 .name {
@@ -242,9 +313,15 @@
 
 /* footer */
 
+.foot-link-list {
+  list-style: none;
+  margin-top: 12px;
+}
+
 .footer {
   flex-shrink: 0;
   background: #2f303a;
+  height: 251px;
 }
 
 .web-foot {
@@ -254,6 +331,10 @@
   font-weight: 700;
   letter-spacing: 0.78px;
   text-decoration: none;
+  /*  */
+  width: 145px;
+  height: 31px;
+  margin-top: 60px;
 }
 
 .studio-foot {
@@ -274,6 +355,7 @@
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.42px;
+  /*  */
 }
 
 .link-foot {
