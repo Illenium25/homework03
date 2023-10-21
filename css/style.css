@@ -407,6 +407,7 @@
   letter-spacing: 0.42px;
   /*  */
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 .foot-link-list .item-foot + .item-foot {
@@ -482,7 +483,6 @@
 
 .project {
   width: 370px;
-  height: 404px;
   border: 1px solid #eee;
   background: #fff;
   margin-right: 30px;
@@ -496,6 +496,9 @@
 .name-box {
   padding: 20px 24px 20px 24px;
   margin: 0;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 .project:nth-child(3n) {
   margin-right: 0;
